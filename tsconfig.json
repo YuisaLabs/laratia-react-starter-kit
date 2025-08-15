@@ -13,6 +13,8 @@
         "noEmit": true,
         "paths": {
             "@/*": ["./resources/js/*"],
+            "@/components/*": ["./resources/js/components/*"],
+            "@/features/*": ["./resources/js/features/*"],
             "ziggy-js": ["./vendor/tightenco/ziggy"]
         }
     },

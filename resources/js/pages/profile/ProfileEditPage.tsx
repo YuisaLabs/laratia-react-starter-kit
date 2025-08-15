@@ -1,14 +1,19 @@
-import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
-import { PageProps } from '@/types';
-import { Head } from '@inertiajs/react';
-import DeleteUserForm from './Partials/DeleteUserForm';
-import UpdatePasswordForm from './Partials/UpdatePasswordForm';
-import UpdateProfileInformationForm from './Partials/UpdateProfileInformationForm';
+import AuthenticatedLayout from "@/components/layouts/authenticated-layout";
+import { PageProps } from "@/types";
+import { Head } from "@inertiajs/react";
+import DeleteUserForm from "@/features/profile/delete-user-form";
+import UpdatePasswordForm from "@/features/profile/update-password-form";
+import UpdateProfileInformationForm from "@/features/profile/update-profile-information-form";
+
+type ProfileEditPageProps = {
+    mustVerifyEmail: boolean;
+    status?: string;
+};
 
 export default function Edit({
     mustVerifyEmail,
     status,
-}: PageProps<{ mustVerifyEmail: boolean; status?: string }>) {
+}: PageProps<ProfileEditPageProps>) {
     return (
         <AuthenticatedLayout
             header={
